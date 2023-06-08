@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    /* CSS Styles */
+    h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(9, 212, 9);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+    width: 100px;
+}
+   50%{
+    width: 200px;
+}
+   100%{
+    width: 100px;
+}
+}
+    .about {
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+      background: #f9f9f9;
+    }
+    .about .card {
+      border-radius: 10px;
+    }
+    .about .card img{
+      border-radius: 10px;
+    }
+    .about h2 {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .about p {
+      font-weight: 500;
+    }
+    #about-btn{
+      width: 150px;
+      height: 38px;
+      border: none;
+      border-radius: 5px;
+      background: rgb(1, 234, 1);
+      color: white;
+      letter-spacing: 2px;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+    #about-btn:hover{
+      width: 170px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+    .card img{
+        
+        width: 900px;
+        height: 350px;
+    }
+    .foter{
+    background: rgb(1, 73, 1);
+}
+.foter .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.foter .box-container .box{
+   padding: 1rem 0;
+   flex: 1 1 25rem;
+}
+.foter .box-container .box h3{
+    font-size: 2.5rem;
+    padding: 7rem 0;
+    color: #fff;
+    display: flex;
+
+}
+.foter .box-container .box p{
+    font-size: 1.5rem;
+    padding: 7rem 0;
+    color: #eee;
+
+}
+.foter .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: 7rem 0;
+    color: #eee;
+}
+.foter .box-container .box a:hover{
+    color: orange;
+    text-decoration: underline;
+
+}
+.foter .credit{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgda(255,255,255,.2);
+}
+.foter .credit span{
+    color: orange;
+}
+  </style>
+</head>
+<body>
+    
+  <section class="about" id="about">
+    <div class="container">
+     <div class="main-txt">
+        <h1>About <span>Us</span></h1>
+
+     </div>
+     <div class="row" style="margin-top: 50px">
+        <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+                <img src="franc/cafe.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0"></div>
+        <h2>chai fellows</h2>
+        <p>Lorem ipsum dolor Lorem ipsum dolor sit ipisicing elit.  quas aut dicta veniam molestiae laboriosam, ipsa quasi obcaecati delectus excepturi earum. Repudiandae magnam, quasi porro dignissimos distinctio deserunt aperiam, suscipit incidunt unde assumenda laborum impedit consequatur! Beatae animi facere iure voluptas est sint repudiandae ipsum, assumenda unde a quod illum fuga cum recusandae quidem alias sed aliquid eum laborum veritatis? Dolore, commodi enim fugiat nihil aperiam repudiandae voluptatibus tempora itaque ratione voluptate ea iusto officiis mollitia sed totam odio corporis assumenda ipsum officia quam voluptatum, nesciunt sequi dolores. Incidunt, aut quae? Illo nisi, qui asperiores a laudantium quae eveniet sed cum vel necessitatibus accusamus aliquid ut. Quisquam labore laborum laboriosam, aperiam perferendis, doloribus cupiditate delectus iure suscipit expedita vitae. Molestias, impedit. Dolor sit dicta sed perferendis suscipit nisi maiores recusandae eum veritatis fuga rem, accusantium, reprehenderit tempora accusamus quia nemo provident quos cumque in labore ipsum veniam exercitationem inventore tenetur! Dolores numquam ad pariatur eveniet qui ea, sequi consequuntur et tempore est temporibus quo aperiam soluta ipsa aspernatur nemo quos iste optio facere assumenda laborum sunt, voluptatum deleniti. Aspernatur consequuntur eos architecto? Ab voluptas asperiores, est atque accusantium maiores ea! quae praesentium beatae soluta consequuntur aut, voluptatibus atque porro voluptate ducimus ratione repellat. sit amet, consectetur adipisicing elit. Magni, placeat. Facere dolorem quo similique dolorum, dicta totam laboriosam est expedita laborum, ratione, officia fuga illo.</p>
+     <button id="about-btn">read more</button>
+    </div>
+      </div>
+    
+
+  </section>
+  <section class="foter">
+    <div class="box container">
+        <div class="box">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum neque, necessitatibus repudiandae perferendis tempora exercitationem eaque officiis sunt itaque magni? Perspiciatis odio temporibus, similique itaque officia suscipit autem voluptatem!</p>
+
+        </div>
+        <div class="box">
+            <h3>branch location</h3>
+            <a href="#">india</a>
+            <a href="#">india</a>
+            <a href="#">india</a>
+            <a href="#">india</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">owner</a>
+            <a href="#">Opportunities</a>
+            <a href="#">gallery</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">whatsapp</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+
+        </div>
+
+    </div>
+    <h1 class="credit">created by <span>mr. harsh sharma </span></h1>
+</section>
+  <script>
+    // JavaScript code goes here (if needed)
+  </script>
+</body>
+</html>
