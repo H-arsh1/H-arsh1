@@ -1,65 +1,34 @@
 import tkinter as tk
 
-def button_click(number):
-    current = entry.get()
-    entry.delete(0, tk.END)
-    entry.insert(0, str(current) + str(number))
+def fahrenheit_to_celsius():
+    fahrenheit = float(fahrenheit_entry.get())
+    celsius = (fahrenheit - 32) * 5/9
+    celsius_label.config(text=f"{round(celsius, 2)}°C")
 
-def button_clear():
-    entry.delete(0, tk.END)
-
-def button_add():
-    first_number = entry.get()
-    global f_num
-    global math
-    math = "addition"
-    f_num = int(first_number)
-    entry.delete(0, tk.END)
-
-def button_subtract():
-    first_number = entry.get()
-    global f_num
-    global math
-    math = "subtraction"
-    f_num = int(first_number)
-    entry.delete(0, tk.END)
-
-def button_multiply():
-    first_number = entry.get()
-    global f_num
-    global math
-    math = "multiplication"
-    f_num = int(first_number)
-    entry.delete(0, tk.END)
-
-def button_divide():
-    first_number = entry.get()
-    global f_num
-    global math
-    math = "division"
-    f_num = int(first_number)
-    entry.delete(0, tk.END)
-
-def button_equal():
-    second_number = entry.get()
-    entry.delete(0, tk.END)
-
-    if math == "addition":
-        entry.insert(0, f_num + int(second_number))
-    elif math == "subtraction":
-        entry.insert(0, f_num - int(second_number))
-    elif math == "multiplication":
-        entry.insert(0, f_num * int(second_number))
-    elif math == "division":
-        entry.insert(0, f_num / int(second_number))
+def celsius_to_fahrenheit():
+    celsius = float(celsius_entry.get())
+    fahrenheit = (celsius * 9/5) + 32
+    fahrenheit_label.config(text=f"{round(fahrenheit, 2)}°F")
 
 window = tk.Tk()
-window.title("Calculator")
+window.title("Temperature Converter")
 
-entry = tk.Entry(window, width=35, borderwidth=5)
-entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+fahrenheit_label = tk.Label(text="Fahrenheit")
+fahrenheit_label.grid(column=0, row=0)
 
-button_1 = tk.Button(window, text="1", padx=40, pady=20, command=lambda: button_click(1))
-button_2 = tk.Button(window, text="2", padx=40, pady=20, command=lambda: button_click(2))
-button_3 = tk.Button(window, text="3", padx=40, pady=20, command=lambda: button_click(3))
-button_4 = tk.Button(window, text="4", padx=40, pady=20, command
+fahrenheit_entry = tk.Entry(width=10)
+fahrenheit_entry.grid(column=1, row=0)
+
+celsius_label = tk.Label(text="Celsius")
+celsius_label.grid(column=0, row=1)
+
+celsius_entry = tk.Entry(width=10)
+celsius_entry.grid(column=1, row=1)
+
+fahrenheit_button = tk.Button(text="Convert to Celsius", command=fahrenheit_to_celsius)
+fahrenheit_button.grid(column=2, row=0)
+
+celsius_button = tk.Button(text="Convert to Fahrenheit", command=celsius_to_fahrenheit)
+celsius_button.grid(column=2, row=1)
+
+window.mainloop()
